@@ -11,24 +11,24 @@ import java.io.IOException;
 
 
 public class paramsVRP {
-	public int mvehic;
-	public int nbclients;
+	public int mvehic; // number of vehicles
+	public int nbclients; // note that depot is not included
 	public int capacity;
 	public double[][] cost; // for the SPPRC subProblem
 	public double[][] distBase; // original distances for the Branch and Bound
 	public double[][] dist; // distances that will be updated during the B&B before being used in the CG & SPPRC
 	public double[][] ttime;
 	public double[][] edges; // weight of each edge during branch and bound
-	public double[] posx, posy, d, wval;
+	public double[] posx, posy, d, wval; // d is demand; wval is weight value 
 	public int[] a; // time windows: a=early, b=late, s=service
 	public int[] b;
 	public int[] s;
 	public double verybig;
 	public double speed;
 	public double gap;
-	public double maxlength;
-	public boolean serviceInTW;
-	String[] citieslab;
+	public double maxlength; // max length of route
+	public boolean serviceInTW; // if true, service must be done before due time (b)
+	String[] citieslab; // string customer id number of cities
 
 	public paramsVRP() {
 		gap = 0.00000000001;
