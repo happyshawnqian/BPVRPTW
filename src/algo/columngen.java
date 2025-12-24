@@ -51,7 +51,7 @@ public class columngen {
 
 	public double computeColGen(paramsVRP userParam, ArrayList<route> routes)
 			throws IOException {
-		int i, j, prevcity, city;
+		int i, j, prevcity, city; // precity: predecessor
 		double cost, obj;
 		double[] pi;
 		boolean oncemore;
@@ -95,7 +95,7 @@ public class columngen {
 				int v;
 				cost = 0.0;
 				prevcity = 0;
-				for (i = 1; i < r.getpath().size(); i++) {
+				for (i = 1; i < r.getpath().size(); i++) { // loop for calculating route cost
 					city = r.getpath().get(i);
 					cost += userParam.dist[prevcity][city];
 					prevcity = city;
@@ -145,9 +145,9 @@ public class columngen {
 			// column generation process
 			// ---------------------------------------------------------
 			DecimalFormat df = new DecimalFormat("#0000.00");
-			oncemore = true;
+			oncemore = true;	// flag for loop to continue
 			double[] prevobj = new double[100];
-			int nbroute;
+			int nbroute;	// ?
 			int previ = -1;
 			while (oncemore) {
 

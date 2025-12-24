@@ -3,7 +3,7 @@ package algo;
 import java.util.ArrayList;
 
 public class route implements Cloneable {
-	public double cost, Q;
+	public double cost, Q; // cost is distance cost; Q is the value of the route decision variable
 	// first resource: cost (e.g. distance or strict travel time)
 
 	public ArrayList<Integer> path;
