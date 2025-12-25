@@ -24,7 +24,7 @@ import java.util.TreeSet;
 
 public class SPPRC {
 	paramsVRP userParam;
-	ArrayList<label> labels;
+	ArrayList<label> labels; // save ALL the labels, later retrieve the label by its index in labels
 
 	class label {
 		// we use a labelling algorithm.
